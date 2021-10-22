@@ -50,6 +50,54 @@ width: 300px;
 }
 @media screen and (min-width: 850px){
     header{
-        justify-content: left;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .card{
+        flex-basis: 250px;
+    }
+    .nav_links{
+        flex-direction: row;
     }
 }
+@media print{
+    .card{
+        flex-basis: 250px;
+    }
+    header{
+        align-items: center;
+    }
+    footer{
+        display: block;
+    }
+    .pricing{
+        align-items: flex-start;
+    }
+    body{
+        background-image: none;
+    }
+    .gallery{
+        display: none;
+    }
+    #gallery{
+        display: none;
+    }
+}
+@keyframes logo_super{
+    from{width: 50px;}
+      to{width: 425px;}
+      start{opacity: 0;}
+      end{opacity: 1;}
+   
+   }  
+    #logo {
+     animation-name: logo_super;
+     animation-duration: 5s no-repeat;
+   }
+   
+   
+   @media screen and (prefers-reduced-motion: reduce){
+   #logo_super{
+     animation: none;
+   }
+   }
