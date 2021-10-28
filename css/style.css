@@ -50,6 +50,7 @@ header{
         justify-content: space-between; 
         top: 0;
         scroll-behavior: smooth;
+        left: 0;
     }
     .card{
         flex-basis: 250px;
