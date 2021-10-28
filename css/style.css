@@ -45,12 +45,17 @@ header{
 
 @media screen and (min-width: 850px){
     header{
+        position: sticky;
         flex-direction: row;
         justify-content: space-between; 
         top: 0;
+        scroll-behavior: smooth;
     }
     .card{
         flex-basis: 250px;
+        z-index: -99;
+        overflow: hidden;
+
     }
     .nav_links{
         flex-direction: row;
@@ -61,6 +66,7 @@ header{
         justify-content: center;
         align-items: center;
         flex-basis: 450px;
+        overflow: hidden;
     }
 }
 
@@ -68,24 +74,26 @@ header{
     .card{
         flex-basis: 250px;
     }
-    .nav_links > ul{
-        display: flex;
+    nav{
+        width: 100%;
+    }
+    .nav_links{
         justify-content: space-around;
         flex-direction: row;
-        margin: 0;
-        padding: 0;
     }
     footer{
         display: block;
     }
     .pricing{
-        align-items: flex-start;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        overflow: visible;
     }
     body{
         background-image: none;
     }
     .card > header{
-        border: solid 2px #45ADDD
+        border: solid 2px #45ADDD;
     }
     .gallery{
         display: none;
